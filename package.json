@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run dev",
+    "build": "npm run build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "npm run preview"
   },
   "dependencies": {
     "lucide-react": "^0.487.0",
