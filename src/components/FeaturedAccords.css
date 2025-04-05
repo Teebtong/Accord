@@ -1,0 +1,26 @@
+.featured-section {
+    padding: 80px;
+  }
+  
+  .accord-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 1024px) {
+    .accord-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .accord-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .featured-section {
+      padding: 40px 20px;
+    }
+  }

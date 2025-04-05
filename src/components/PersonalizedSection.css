@@ -1,0 +1,9 @@
+.personalized-section {
+    padding: 80px;
+  }
+  
+  @media (max-width: 768px) {
+    .personalized-section {
+      padding: 40px 20px;
+    }
+  }
