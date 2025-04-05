@@ -1,0 +1,25 @@
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .tagline {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
