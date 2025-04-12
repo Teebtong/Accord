@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40">
+  <!-- ACCORD text -->
+  <text 
+    x="5" 
+    y="30" 
+    font-family="'Cormorant Garamond', serif" 
+    font-weight="500" 
+    font-size="28" 
+    letter-spacing="2" 
+    fill="#333333">ACCORD</text>
+  
+  <!-- Period in amber color -->
+  <circle cx="148" cy="28" r="4" fill="#E68A00"/>
+</svg>

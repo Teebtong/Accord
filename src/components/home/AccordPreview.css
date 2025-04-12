@@ -1,0 +1,87 @@
+/* AccordPreview.css - Styling for the accord preview component */
+
+.accord-preview {
+    width: 280px;
+    background-color: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .accord-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .preview-image {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  
+  .accord-preview:hover .preview-image img {
+    transform: scale(1.05);
+  }
+  
+  .preview-content {
+    padding: 20px;
+  }
+  
+  .preview-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .preview-content p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #666;
+    text-align: left;
+  }
+  
+  .preview-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .preview-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--light-gray);
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  .preview-note.top-note {
+    border-left: 3px solid #FFA726;
+  }
+  
+  .preview-note.heart-note {
+    border-left: 3px solid #EF5350;
+  }
+  
+  .preview-note.base-note {
+    border-left: 3px solid #5C6BC0;
+  }
+  
+  .note-name {
+    font-weight: 500;
+  }
+  
+  .note-type {
+    font-size: 12px;
+    font-style: italic;
+    color: #888;
+  }

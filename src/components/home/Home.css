@@ -1,0 +1,486 @@
+/* Home.css - Styling for the Accord home page */
+
+:root {
+    --amber-light: #FFCA80;
+    --amber: #FFA726;
+    --amber-dark: #E68A00;
+    --charcoal: #333333;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --off-white: #FAF9F7;
+  }
+  
+  .home-page {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--charcoal);
+    background-color: var(--white);
+  }
+  
+  /* Header Styling */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+    background-color: transparent;
+    margin-top: 80px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  .logo span {
+    color: var(--amber-dark);
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button-link {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .button-link.signup {
+    background-color: var(--amber);
+    color: var(--white);
+  }
+  
+  .button-link:hover {
+    opacity: 0.9;
+  }
+  
+  /* Hero Section */
+  .home-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.8)), 
+                url('/images/hero-bg.jpg') center/cover no-repeat;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  
+  .tagline {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: var(--amber);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--amber-dark);
+  }
+  
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Animated charm bracelet visualization */
+  .accord-charm-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .charm {
+    width: 120px;
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    opacity: 0;
+    animation: floatIn 0.6s ease forwards;
+  }
+  
+  .charm span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .charm.top-note {
+    border-left: 3px solid #FFA726;
+    animation-delay: 0.8s;
+  }
+  
+  .charm.heart-note {
+    border-left: 3px solid #EF5350;
+    animation-delay: 1.2s;
+  }
+  
+  .charm.base-note {
+    border-left: 3px solid #5C6BC0;
+    animation-delay: 1.6s;
+  }
+  
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .connector {
+    height: 30px;
+    width: 1px;
+    background-color: var(--amber);
+    opacity: 0;
+    animation: stretch 0.4s ease forwards;
+  }
+  
+  .connector:nth-of-type(1) {
+    animation-delay: 1s;
+  }
+  
+  .connector:nth-of-type(2) {
+    animation-delay: 1.4s;
+  }
+  
+  @keyframes stretch {
+    from { opacity: 0; height: 0; }
+    to { opacity: 1; height: 30px; }
+  }
+  
+  /* Concept Section */
+  .concept-section {
+    padding: 100px 80px;
+    background-color: var(--off-white);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 8px;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--charcoal);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .tabs button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--amber);
+    transition: width 0.3s ease;
+  }
+  
+  .tabs button.active:after {
+    width: 40px;
+  }
+  
+  .tabs button.active {
+    color: var(--amber-dark);
+  }
+  
+  .tab-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .concept-content {
+    animation: fadeIn 0.6s ease;
+  }
+  
+  .concept-content h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .concept-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  /* Note explanation */
+  .note-explanation {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  
+  .note {
+    flex: 1;
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .note h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  
+  .note p {
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  /* Collection preview */
+  .collection-preview {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  /* Seasonal teaser */
+  .seasonal-teaser {
+    display: flex;
+    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .seasonal-image {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .seasonal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .seasonal-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .seasonal-content h3 {
+    font-size: 18px;
+    color: var(--amber-dark);
+    margin-bottom: 8px;
+  }
+  
+  .seasonal-content h4 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  
+  .seasonal-content p {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  
+  /* Testimonial Section */
+  .testimonial-section {
+    padding: 100px 80px;
+    background-color: var(--white);
+  }
+  
+  .testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .testimonial p {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial cite {
+    font-size: 18px;
+    color: var(--amber-dark);
+    font-style: normal;
+  }
+  
+  /* Final CTA */
+  .final-cta {
+    padding: 80px;
+    text-align: center;
+    background-color: var(--off-white);
+  }
+  
+  .final-cta h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  
+  .cta-subtext {
+    margin-top: 16px;
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  /* Footer */
+  .home-footer {
+    padding: 60px 80px 30px;
+    background-color: var(--charcoal);
+    color: var(--white);
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  .footer-logo span {
+    color: var(--amber);
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .footer-links a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--amber-light);
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .home-hero {
+      flex-direction: column;
+      padding-top: 100px;
+      text-align: center;
+    }
+    
+    .hero-content {
+      margin-bottom: 60px;
+    }
+    
+    .note-explanation,
+    .collection-preview {
+      flex-direction: column;
+    }
+    
+    .seasonal-teaser {
+      flex-direction: column;
+    }
+    
+    .seasonal-image {
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-header,
+    .home-hero,
+    .concept-section,
+    .testimonial-section,
+    .final-cta,
+    .home-footer {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    .hero-content h1 {
+      font-size: 40px;
+    }
+    
+    .tabs {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
